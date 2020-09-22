@@ -51,16 +51,17 @@ export const HeaderInner = (): React.ReactElement => {
       ) : null}
       <div className={styles.stickyInner}>
         <Link href="/">allenslist</Link>
-        <div
-          className={styles.headerItem}
-          onClick={onClickAddItem}
-          onKeyDown={onClickAddItem}
-          role="button"
-          tabIndex={0}
-        >
-          {!isSignedIn && 'signin to '}
-          add an overpriced item
-        </div>
+        {isSignedIn && (
+          <div
+            className={styles.headerItem}
+            onClick={onClickAddItem}
+            onKeyDown={onClickAddItem}
+            role="button"
+            tabIndex={0}
+          >
+            add an overpriced item
+          </div>
+        )}
         <div
           className={styles.headerItem}
           onClick={handleShowSignin}
@@ -68,7 +69,7 @@ export const HeaderInner = (): React.ReactElement => {
           role="button"
           tabIndex={-1}
         >
-          {user?.displayName ? userPhoto : 'SignIn'}
+          {user?.displayName ? userPhoto : 'SignIn to add an overpriced item'}
         </div>
       </div>
     </div>
