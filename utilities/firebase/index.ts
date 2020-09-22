@@ -3,7 +3,7 @@ import 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCxhkOqf2JvZ3ArwuR4_BQajEDhU1PWKEQ',
-  authDomain: 'allenslist-37020.firebaseapp.com',
+  authDomain: 'auth.allenslist.com',
   databaseURL: 'https://allenslist-37020.firebaseio.com',
   projectId: 'allenslist-37020',
   storageBucket: 'allenslist-37020.appspot.com',
