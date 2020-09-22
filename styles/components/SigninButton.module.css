@@ -1,0 +1,27 @@
+.signinButton {
+  background: inline(
+    'public/images/google_signin_buttons/web/2x/btn_google_signin_light_normal_web@2x.png'
+  );
+  background-size: size(
+    'public/images/google_signin_buttons/web/2x/btn_google_signin_light_normal_web@2x.png'
+  );
+  height: 94px;
+  width: 384px;
+  border: none;
+}
+
+.signinButton:hover {
+  border-radius: 0.5rem;
+  background: inline(
+    'public/images/google_signin_buttons/web/2x/btn_google_signin_light_focus_web@2x.png'
+  );
+}
+
+.signinButton:active {
+  background: inline(
+    'public/images/google_signin_buttons/web/2x/btn_google_signin_light_pressed_web@2x.png'
+  );
+}
+.signinButton:active {
+  outline: none;
+}

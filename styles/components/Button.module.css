@@ -1,0 +1,14 @@
+.button {
+  border-radius: 1rem;
+  border-width: 0px;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #264653;
+  color: white;
+  font-size: large;
+}
+
+.disabled {
+  background-color: grey;
+  color: lightgray;
+}

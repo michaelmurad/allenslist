@@ -1,0 +1,6 @@
+node_modules
+/.next
+.env.local
+firebase.json
+yarn-error.log
+.vscode

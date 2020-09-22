@@ -1,0 +1,7 @@
+.container {
+  background-color: #f4a261;
+  padding: 1rem;
+  color: black;
+  width: 100%;
+  flex: 1;
+}
