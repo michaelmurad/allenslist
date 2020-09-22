@@ -2,14 +2,14 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: process.env.FB_API_KEY,
-  authDomain: process.env.FB_AUTH_DOMAIN,
-  databaseURL: process.env.FB_DATABASE_URL,
-  projectId: process.env.FB_PROJECT_ID,
-  storageBucket: process.env.FB_STORAGE_BUCKET,
-  messagingSenderId: process.env.FB_MESSAGING_SENDER_ID,
-  appId: process.env.FB_APP_ID,
-  measurementId: process.env.FB_MEASUREMENT_ID,
+  apiKey: 'AIzaSyCxhkOqf2JvZ3ArwuR4_BQajEDhU1PWKEQ',
+  authDomain: 'allenslist-37020.firebaseapp.com',
+  databaseURL: 'https://allenslist-37020.firebaseio.com',
+  projectId: 'allenslist-37020',
+  storageBucket: 'allenslist-37020.appspot.com',
+  messagingSenderId: '827989495423',
+  appId: '1:827989495423:web:4881a4551aac7fb144b94a',
+  measurementId: 'G-T3N3VK2XTX',
 };
 
 const initializeFirebase = (): void => {
