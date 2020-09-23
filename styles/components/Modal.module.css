@@ -12,10 +12,10 @@
 }
 
 .content {
-  color: black;
+  color: var(--light);
   padding: 1rem;
   border-radius: 15px;
-  background-color: #e9c46a;
+  background-color: var(--primaryColor);
   z-index: 10000000;
   box-shadow: 0px 0px 12px 12px rgba(0, 0, 0, 0.2);
 }

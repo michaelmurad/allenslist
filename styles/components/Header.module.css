@@ -8,7 +8,7 @@
 
 .headerInner img {
   margin-right: 0.4rem;
-  background-color: white;
+  background-color: var(--light);
   padding: 1px;
   border-radius: 15px;
   margin-top: 0px;
@@ -23,6 +23,7 @@
 .outerContainer {
   padding: 1rem;
   width: 100%;
+  background-color: var(--primaryColor);
 }
 .titleContainer {
   display: flex;
@@ -39,7 +40,7 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: var(--primaryColor);
   text-decoration: none;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .headerItem {
-  color: white;
+  color: var(--light);
   cursor: pointer;
 }
 
@@ -85,12 +86,12 @@
   align-items: center;
   width: 100%;
   padding: 10px;
-  background-color: #264653;
+  background-color: var(--primaryColor);
   color: white;
 }
 
 .stickyInner div:active {
-  color: grey;
+  color: gray;
 }
 
 .stickyInner div:focus {
