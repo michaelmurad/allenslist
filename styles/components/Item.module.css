@@ -30,6 +30,11 @@
     border-radius: 1rem;
   }
 }
+.itemTitle {
+  color: black;
+  margin-top: 1rem;
+  font-size: large;
+}
 
 .itemDescription {
   text-align: center;

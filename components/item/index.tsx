@@ -6,10 +6,13 @@ export const Item = ({
   description,
   image,
   title,
-}: ItemProps): React.ReactElement => (
-  <a href={url} key={url} className={styles.item}>
-    <img alt="preview" src={image} />
-    <title>{title}</title>
-    <div className={styles.itemDescription}>{description}</div>
-  </a>
-);
+}: ItemProps): React.ReactElement => {
+  console.log({ title });
+  return (
+    <a href={url} key={url} className={styles.item}>
+      {image && <img alt="preview" src={image} />}
+      {title && <div className={styles.itemTitle}>{title}</div>}
+      <div className={styles.itemDescription}>{description}</div>
+    </a>
+  );
+};
