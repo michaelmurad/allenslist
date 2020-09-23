@@ -10,7 +10,7 @@ const items: Items = async (req, res) => {
   } catch (error) {
     console.log(error);
     res
-      .status(res.statusCode || 500)
+      .status(error?.requestResult?.statusCode || res.statusCode || 500)
       .json({ message: error.message || 'Sorry something went wrong' });
   }
 };
