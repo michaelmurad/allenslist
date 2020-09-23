@@ -7,7 +7,7 @@ import { Fetcher } from '@types';
  * @param body optional the body of the request
  */
 export const fetcher: Fetcher = async (url, method = 'GET', body) => {
-  const absoluteUrl = `${process.env.BASE_URL}/${url}`;
+  const absoluteUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/${url}`;
   const res = await fetch(absoluteUrl, {
     method,
     body: JSON.stringify(body),
