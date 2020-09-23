@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  background-color: var(--darkGrey);
+  background-color: var(--darkGray);
   align-items: center;
   padding: 1rem;
 }
