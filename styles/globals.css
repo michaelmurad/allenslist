@@ -4,22 +4,12 @@ body {
   margin: 0;
   font-family: Syne, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --primaryColor: #035c9f;
-  --primaryColorDark: #003370;
-  --primaryColorLight: #5089d1;
-  --secondaryColor: #0af9c9;
-  --secondaryColorDark: #00c598;
-  --secondaryColorLight: #6dfffc;
-  --dark: black;
-  --light: white;
-  --darkGray: #e0e0e0;
-  --gray: #f5f5f5;
 }
 body {
-  background-color: var(--primaryColor);
+  background-color: #035c9f;
   display: flex;
   flex-direction: column;
-  color: var(--light);
+  color: white;
 }
 
 #__next {
@@ -29,7 +19,7 @@ body {
 }
 
 a {
-  color: var(--light);
+  color: white;
   text-decoration: none;
 }
 
@@ -41,7 +31,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--darkGray);
+  background-color: #e0e0e0;
 }
 
 footer {

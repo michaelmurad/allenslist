@@ -18,7 +18,6 @@
           "custom-properties": false
         }
       }
-    ],
-    "postcss-css-variables"
+    ]
   ]
 }
