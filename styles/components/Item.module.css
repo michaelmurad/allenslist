@@ -7,7 +7,7 @@
   margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: antiquewhite;
+  background-color: var(--grey);
 }
 
 .item img {
@@ -31,7 +31,7 @@
   }
 }
 .itemTitle {
-  color: black;
+  color: var(--dark);
   margin-top: 1rem;
   font-size: large;
 }
@@ -39,6 +39,6 @@
 .itemDescription {
   text-align: center;
   max-width: 500;
-  color: black;
+  color: var(--dark);
   margin-top: 1rem;
 }

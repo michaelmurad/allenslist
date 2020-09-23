@@ -3,8 +3,8 @@
   border-width: 0px;
   padding: 0.5rem;
   cursor: pointer;
-  background-color: #264653;
-  color: white;
+  background-color: var(--secondaryColor);
+  color: var(--dark);
   font-size: large;
 }
 
