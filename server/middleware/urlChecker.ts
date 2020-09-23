@@ -12,7 +12,6 @@ export const urlChecker = async (
   next: (response: true | Error) => any
 ): Promise<true | Error> => {
   const { url } = JSON.parse(req.body);
-
   try {
     const response = await fetch(url);
     if (response.status == 200) {
@@ -20,6 +19,8 @@ export const urlChecker = async (
     }
   } catch (error) {
     console.log(error);
+    res.status(500);
+    return next(error);
   }
   res.status(403);
   return next(new Error('invalid url'));

@@ -4,10 +4,15 @@ import { ItemProps } from '@types';
 export const Item = ({
   url,
   description,
-  img,
-}: ItemProps): React.ReactElement => (
-  <a href={url} key={url} className={styles.item}>
-    <img alt="preview" src={img} />
-    <div className={styles.itemDescription}>{description}</div>
-  </a>
-);
+  image,
+  title,
+}: ItemProps): React.ReactElement => {
+  console.log({ image });
+  return (
+    <a href={url} key={url} className={styles.item}>
+      <img alt="preview" src={image} />
+      <title>{title}</title>
+      <div className={styles.itemDescription}>{description}</div>
+    </a>
+  );
+};

@@ -45,11 +45,15 @@ export interface FetcherReturn {
 }
 
 export interface Item {
-  url: string;
   description: string;
-  img: string;
+  icon: string;
+  image: string;
+  keywords: string[];
   title: string;
-  domain: string;
+  language: string;
+  type: string;
+  url: string;
+  provider: string;
 }
 
 export type Items = (
@@ -60,7 +64,8 @@ export type Items = (
 export interface ItemProps {
   url: string;
   description: string;
-  img: string;
+  image: string;
+  title: string;
 }
 
 export type ItemsController = (

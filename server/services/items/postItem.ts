@@ -1,5 +1,6 @@
 import { query as q } from 'faunadb';
-import linkPreviewGenerator from 'link-preview-generator';
+import { getMetadata } from 'page-metadata-parser';
+import domino from 'domino';
 
 import { faunaClient } from '@server/database/faunadb';
 import { urlChecker } from '@server/middleware/urlChecker';
@@ -17,14 +18,15 @@ const itemQuery = (data: Item): Promise<FaunaItem> =>
  */
 export const postItem: PostItem = async (req, res) => {
   const { url } = JSON.parse(req.body);
-
   await runMiddleware(req, res, urlChecker);
 
-  // get preview data
-  const item: Item = await linkPreviewGenerator(url);
+  // get metadata
+  const response = await fetch(url);
+  const html = await response.text();
+  const doc = domino.createWindow(html).document;
+  const metadata = getMetadata(doc, url);
 
   // POST item to DB
-  const data = await itemQuery(item);
-
+  const data = await itemQuery(metadata);
   res.status(200).json(data);
 };

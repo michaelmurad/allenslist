@@ -20,7 +20,7 @@ export const Items = (): React.ReactElement => {
     return (
       <div className={styles.empty}>
         <p>interesting</p>
-        <p>there are no overpriced items for us to waste our money on.</p>
+        <p>there are no overpriced items</p>
         <p>someone should add one</p>
       </div>
     );
@@ -28,13 +28,14 @@ export const Items = (): React.ReactElement => {
   return (
     <div className={styles.itemContainer}>
       {items.map(({ data }: FaunaItem) => {
-        const { description, img, url } = data as ItemInterface;
+        const { description, image, url, title } = data as ItemInterface;
         return (
           <Item
+            title={title}
             description={description}
-            img={img}
+            image={image}
             url={url}
-            key={description + Math.random()}
+            key={title}
           />
         );
       })}
