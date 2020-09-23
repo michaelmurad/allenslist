@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/no-autofocus */
 import { useState } from 'react';
 import firebase from 'firebase';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 
 import styles from '@styles/components/AddItem.module.css';
 import { fetcher } from '@utilities/fetcher';
-import { itemState } from '@state/items';
+import { itemState, itemSelector } from '@state/items';
 import { Button } from '@components/button';
 
 export const AddItem = (): React.ReactElement => {
@@ -13,11 +13,16 @@ export const AddItem = (): React.ReactElement => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
-  const [items, setItems] = useRecoilState(itemState);
+  const [itemsString, setItemsString] = useRecoilState(itemState);
+  const { items } = useRecoilValue(itemSelector);
 
   const onClick = async () => {
     if (!text) {
       return setError('You gotta type something');
+    }
+    const itemExists = items.find((item) => item?.data?.url === text);
+    if (itemExists) {
+      return setError('Item already exists');
     }
     const token = await firebase
       .auth()
@@ -40,7 +45,7 @@ export const AddItem = (): React.ReactElement => {
 
     setText('');
     setSuccess('Yay! You helped make us go even more broke!');
-    setItems(JSON.stringify([data, ...JSON.parse(items)]));
+    setItemsString(JSON.stringify([data, ...JSON.parse(itemsString)]));
   };
   return (
     <form className={styles.form}>

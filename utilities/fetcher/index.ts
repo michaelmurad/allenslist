@@ -7,14 +7,15 @@ import { Fetcher } from '@types';
  * @param body optional the body of the request
  */
 export const fetcher: Fetcher = async (url, method = 'GET', body) => {
-  const res = await fetch(url, {
+  const absoluteUrl = `${process.env.BASE_URL}/${url}`;
+  const res = await fetch(absoluteUrl, {
     method,
     body: JSON.stringify(body),
   });
   const data = await res.json();
   let error = null;
   if (res.status !== 200) {
-    error = data.message || JSON.stringify(data);
+    error = data.message || 'Sorry Something went wrong';
   }
   return { data, error };
 };
