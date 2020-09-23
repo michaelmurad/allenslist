@@ -1,4 +1,3 @@
-import '@styles/globals.css';
 import styles from '@styles/components/Item.module.css';
 import { ItemProps } from '@types';
 
