@@ -13,9 +13,7 @@ const App = ({ Component, pageProps }: AppProps): React.ReactElement => {
   initializeFirebase();
   return (
     <RecoilRoot>
-      <div id="root">
-        <Component {...pageProps} />
-      </div>
+      <Component {...pageProps} />
     </RecoilRoot>
   );
 };
