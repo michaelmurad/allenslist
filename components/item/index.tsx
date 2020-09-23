@@ -7,7 +7,6 @@ export const Item = ({
   image,
   title,
 }: ItemProps): React.ReactElement => {
-  console.log({ title });
   return (
     <a href={url} key={url} className={styles.item}>
       {image && <img alt="preview" src={image} />}
