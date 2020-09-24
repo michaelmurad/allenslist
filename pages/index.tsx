@@ -39,7 +39,7 @@ const Home = ({
       console.log('useEffectData', data, error);
     };
     fetchData();
-    setItems(JSON.stringify(itemJSON));
+    setItems(itemJSON);
     setError(error);
   }, []);
 
