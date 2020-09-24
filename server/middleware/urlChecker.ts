@@ -22,6 +22,6 @@ export const urlChecker = async (
     res.status(500);
     return next(error);
   }
-  res.status(403);
+  res.status(406);
   return next(new Error('invalid url'));
 };
