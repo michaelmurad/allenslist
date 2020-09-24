@@ -38,7 +38,7 @@ export const Header = ({ title }: { title?: string }): React.ReactElement => {
         <meta name="title" content="allenslist"></meta>
         <meta
           name="description"
-          content=" - a curated list of expensive shit allen makes us want to buy"
+          content="a curated list of expensive shit allen makes us want to buy"
         ></meta>
 
         {/* <!-- Open Graph / Facebook --> */}
@@ -47,7 +47,7 @@ export const Header = ({ title }: { title?: string }): React.ReactElement => {
         <meta property="og:title" content="allenslist"></meta>
         <meta
           property="og:description"
-          content=" - a curated list of expensive shit allen makes us want to buy"
+          content="a curated list of expensive shit allen makes us want to buy"
         ></meta>
         <meta
           property="og:image"
@@ -60,7 +60,7 @@ export const Header = ({ title }: { title?: string }): React.ReactElement => {
         <meta property="twitter:title" content="allenslist"></meta>
         <meta
           property="twitter:description"
-          content=" - a curated list of expensive shit allen makes us want to buy"
+          content="curated list of expensive shit allen makes us want to buy"
         ></meta>
         <meta
           property="twitter:image"
