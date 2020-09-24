@@ -30,6 +30,51 @@ export const Header = ({ title }: { title?: string }): React.ReactElement => {
           href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap"
           rel="stylesheet"
         ></link>
+        {/* <!-- Primary Meta Tags --> */}
+        <title>
+          allenslist - a curated list of expensive shit allen makes us want to
+          buy
+        </title>
+        <meta
+          name="title"
+          content="allenslist - a curated list of expensive shit allen makes us want to buy"
+        ></meta>
+        <meta
+          name="description"
+          content="With allenslist you can can go broke while your significant other yells at you for spending $300 on a toaster... "
+        ></meta>
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website"></meta>
+        <meta property="og:url" content="https://metatags.io/"></meta>
+        <meta
+          property="og:title"
+          content="allenslist - a curated list of expensive shit allen makes us want to buy"
+        ></meta>
+        <meta
+          property="og:description"
+          content="With allenslist you can can go broke while your significant other yells at you for spending $300 on a toaster... "
+        ></meta>
+        <meta
+          property="og:image"
+          content={require('/images/allenslist-meta-img.png')}
+        ></meta>
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image"></meta>
+        <meta property="twitter:url" content="https://metatags.io/"></meta>
+        <meta
+          property="twitter:title"
+          content="allenslist - a curated list of expensive shit allen makes us want to buy"
+        ></meta>
+        <meta
+          property="twitter:description"
+          content="With allenslist you can can go broke while your significant other yells at you for spending $300 on a toaster... "
+        ></meta>
+        <meta
+          property="twitter:image"
+          content={require('/images/allenslist-meta-img.png')}
+        ></meta>
       </Head>
       <div className={styles.outerContainer}>
         <div className={styles.titleContainer}>
