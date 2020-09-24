@@ -11,7 +11,6 @@ import { Items } from '@components/items';
 import { Footer } from '@components/footer';
 
 import { FaunaQuery } from '@types';
-import { fetcher } from '@utilities/fetcher';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
@@ -19,6 +18,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     console.log({ data });
     return { props: { itemJSON: JSON.stringify(data), error: null } };
   } catch (error) {
+    console.error(error);
     return { props: { itemJSON: null, error: error.message } };
   }
 };
@@ -34,11 +34,6 @@ const Home = ({
   const [, setItems] = useRecoilState(itemState);
   const [, setError] = useRecoilState(itemErrorState);
   React.useEffect(() => {
-    const fetchData = async () => {
-      const { data, error } = await fetcher('/api/items');
-      console.log('useEffectData', data, error);
-    };
-    fetchData();
     setItems(itemJSON);
     setError(error);
   }, []);
