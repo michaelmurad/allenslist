@@ -1,7 +1,7 @@
 import React from 'react';
 import firebase from 'firebase';
 import { useRecoilState } from 'recoil';
-// import { GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';
 
 import { userState, initialUserState } from '@state/user';
 import { itemErrorState, itemState } from '@state/items';
@@ -11,7 +11,8 @@ import { Items } from '@components/items';
 import { Footer } from '@components/footer';
 
 import { FaunaQuery } from '@types';
-export async function GetServerSideProps() {
+
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const { data } = (await itemQuery) as FaunaQuery;
     console.log({ data });
@@ -19,7 +20,7 @@ export async function GetServerSideProps() {
   } catch (error) {
     return { props: { itemJSON: null, error: error.message } };
   }
-}
+};
 
 const Home = ({
   itemJSON,
