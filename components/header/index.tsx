@@ -57,7 +57,7 @@ export const Header = ({ title }: { title?: string }): React.ReactElement => {
         ></meta>
         <meta
           property="og:image"
-          content={require('/images/allenslist-meta-img.png')}
+          content={'https://i.ibb.co/frjqFYm/allenslist-meta-img.png'}
         ></meta>
 
         {/* <!-- Twitter --> */}
@@ -73,7 +73,7 @@ export const Header = ({ title }: { title?: string }): React.ReactElement => {
         ></meta>
         <meta
           property="twitter:image"
-          content={require('/images/allenslist-meta-img.png')}
+          content="https://i.ibb.co/frjqFYm/allenslist-meta-img.png"
         ></meta>
       </Head>
       <div className={styles.outerContainer}>
