@@ -1,18 +1,18 @@
 import React from 'react';
 import firebase from 'firebase';
 import { useRecoilState } from 'recoil';
-import { GetServerSideProps } from 'next';
+// import { GetServerSideProps } from 'next';
 
 import { userState, initialUserState } from '@state/user';
 import { itemErrorState, itemState } from '@state/items';
-import { itemQuery } from '@server/services/items/getItems';
 import { Header } from '@components/header';
 import { Items } from '@components/items';
 import { Footer } from '@components/footer';
 
 import { FaunaQuery } from '@types';
+import { itemQuery } from '@server/services/items/getItems';
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export async function getServerSideProps() {
   try {
     const { data } = (await itemQuery) as FaunaQuery;
     console.log({ data });
@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } catch (error) {
     return { props: { itemJSON: null, error: error.message } };
   }
-};
+}
 
 const Home = ({
   itemJSON,

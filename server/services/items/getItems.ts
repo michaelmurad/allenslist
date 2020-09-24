@@ -19,5 +19,5 @@ export const itemQuery = faunaClient.query(
 export const getItems: GetItems = async (_req, res) => {
   // Get items from DB
   const { data } = (await itemQuery) as FaunaQuery;
-  res.status(200).json(data);
+  res.json(data);
 };
