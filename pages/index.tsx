@@ -15,7 +15,7 @@ import { fetcher } from '@utilities/fetcher';
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const { data } = (await itemQuery) as FaunaQuery;
+    const { data } = (await itemQuery()) as FaunaQuery;
     console.log({ data });
     return { props: { itemJSON: JSON.stringify(data), error: null } };
   } catch (error) {
