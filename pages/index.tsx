@@ -1,26 +1,25 @@
 import React from 'react';
 import firebase from 'firebase';
 import { useRecoilState } from 'recoil';
-// import { GetServerSideProps } from 'next';
+import { GetServerSideProps } from 'next';
 
 import { userState, initialUserState } from '@state/user';
 import { itemErrorState, itemState } from '@state/items';
+import { itemQuery } from '@server/services/items/getItems';
 import { Header } from '@components/header';
 import { Items } from '@components/items';
 import { Footer } from '@components/footer';
 
 import { FaunaQuery } from '@types';
-import { itemQuery } from '@server/services/items/getItems';
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const { data } = (await itemQuery) as FaunaQuery;
-    console.log({ data });
     return { props: { itemJSON: JSON.stringify(data), error: null } };
   } catch (error) {
     return { props: { itemJSON: null, error: error.message } };
   }
-}
+};
 
 const Home = ({
   itemJSON,
