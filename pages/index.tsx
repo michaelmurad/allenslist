@@ -15,6 +15,7 @@ import { FaunaQuery } from '@types';
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const { data } = (await itemQuery) as FaunaQuery;
+    console.log({ data });
     return { props: { itemJSON: JSON.stringify(data), error: null } };
   } catch (error) {
     return { props: { itemJSON: null, error: error.message } };
