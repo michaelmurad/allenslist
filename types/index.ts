@@ -76,11 +76,19 @@ export type ItemsController = (
 export interface LogoutButtonProps {
   handleShowSignin: () => void;
 }
+export type CorrectProvider = (
+  provider: Provider
+) => firebase.auth.GoogleAuthProvider | firebase.auth.OAuthProvider;
 
 export type PostItem = (
   req: NextApiRequest,
   res: NextApiResponse
 ) => Promise<void>;
+
+export enum Provider {
+  GOOGLE = 'Google',
+  MICROSOFT = 'Microsoft',
+}
 
 export type RunMiddleWare = (
   req: NextApiRequest,
@@ -94,10 +102,12 @@ export type RunMiddleWare = (
 
 export type SigninButtonFunc = ({
   handleShowSignin,
+  provider,
 }: SigninButtonProps) => React.ReactElement;
 
 export interface SigninButtonProps {
   handleShowSignin: () => void;
+  provider: Provider;
 }
 
 export interface SigninProps {

@@ -1,27 +1,34 @@
-.signinButton {
-  background: inline(
-    'public/images/google_signin_buttons/web/2x/btn_google_signin_light_normal_web@2x.png'
-  );
-  background-size: size(
-    'public/images/google_signin_buttons/web/2x/btn_google_signin_light_normal_web@2x.png'
-  );
+.microsoft {
+  margin: auto;
+  height: 41px;
+  width: 215px;
+  border: none;
+  background: inline('public/images/ms-symbollockup_signin_light.png');
+  cursor: pointer;
+}
+
+.google {
   height: 94px;
   width: 384px;
   border: none;
+  background: inline(
+    'public/images/google_signin_buttons/web/2x/btn_google_signin_light_normal_web@2x.png'
+  );
+  cursor: pointer;
 }
 
-.signinButton:hover {
+.google:hover {
   border-radius: 0.5rem;
   background: inline(
     'public/images/google_signin_buttons/web/2x/btn_google_signin_light_focus_web@2x.png'
   );
 }
 
-.signinButton:active {
+.google:active {
   background: inline(
     'public/images/google_signin_buttons/web/2x/btn_google_signin_light_pressed_web@2x.png'
   );
 }
-.signinButton:active {
+.google:active .button:active {
   outline: none;
 }

@@ -1,22 +1,6 @@
-.form {
-  font-size: large;
-}
-
-.form label {
-  margin-right: 1rem;
-}
-.form input {
-  margin-bottom: 1rem;
-  border-radius: 3px;
-  border-width: 0px;
+.container {
   padding: 1rem;
-}
-
-.title {
-  font-size: x-large;
-}
-
-.buttonCont {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: [row1-start] 7rem [row1-end row2-start] 3rem;
 }

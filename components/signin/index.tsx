@@ -1,6 +1,12 @@
 import dynamic from 'next/dynamic';
 
-import { LogoutButtonProps, SigninButtonProps, SigninProps } from '@types';
+import styles from '@styles/components/Signin.module.css';
+import {
+  LogoutButtonProps,
+  Provider,
+  SigninButtonProps,
+  SigninProps,
+} from '@types';
 
 const DynamicLogoutButton = dynamic(
   async (): Promise<React.FunctionComponent<LogoutButtonProps>> => {
@@ -23,7 +29,17 @@ export const Signin = ({
   const showSignedIn = isSignedIn ? (
     <DynamicLogoutButton handleShowSignin={handleShowSignin} />
   ) : (
-    <DynamicSigninButton handleShowSignin={handleShowSignin} />
+    <div className={styles.container}>
+      <DynamicSigninButton
+        handleShowSignin={handleShowSignin}
+        provider={Provider.GOOGLE}
+      />
+
+      <DynamicSigninButton
+        handleShowSignin={handleShowSignin}
+        provider={Provider.MICROSOFT}
+      />
+    </div>
   );
 
   return showSignedIn;
