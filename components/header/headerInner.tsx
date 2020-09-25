@@ -29,8 +29,10 @@ export const HeaderInner = (): React.ReactElement => {
 
   const handleShowSignin = () => setShowSignin((prevState) => !prevState);
   const handleShowAddItem = () => setAddItem((prevState) => !prevState);
-  const userPhoto = (
+  const userPhoto = user?.photoURL ? (
     <img alt={user.displayName as string} src={user?.photoURL as string}></img>
+  ) : (
+    user.displayName
   );
   const isSignedIn = !!user?.displayName;
   const onClickAddItem = isSignedIn ? handleShowAddItem : handleShowSignin;
