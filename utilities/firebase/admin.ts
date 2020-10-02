@@ -9,7 +9,6 @@ const services = {
   credential: admin.credential.cert(firebaseAcount),
   databaseURL: process.env.FB_DATABASE_URL,
 };
-// }
 
 class FirebaseAdmin {
   private static instance: FirebaseAdmin;
