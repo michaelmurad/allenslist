@@ -21,7 +21,7 @@
     "faunadb": "^3.0.1",
     "firebase": "^7.19.1",
     "firebase-admin": "^9.1.1",
-    "next": "9.5.3",
+    "next": "^10.0.5",
     "page-metadata-parser": "^1.1.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
