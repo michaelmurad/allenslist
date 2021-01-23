@@ -5,17 +5,14 @@ import { GetServerSideProps } from 'next';
 
 import { userState, initialUserState } from '@state/user';
 import { itemErrorState, itemState } from '@state/items';
-import { itemQuery } from '@server/services/items/getItems';
+import { getAllCollection } from '@server/services/getAllCollection';
 import { Header } from '@components/header';
 import { Items } from '@components/items';
 import { Footer } from '@components/footer';
 
-import { FaunaQuery } from '@types';
-
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const { data } = (await itemQuery()) as FaunaQuery;
-    console.log({ data });
+    const data = await getAllCollection('items');
     return { props: { itemJSON: JSON.stringify(data), error: null } };
   } catch (error) {
     console.error(error);

@@ -1,12 +1,20 @@
-import { itemsController } from '@server/controllers/items';
+import { writeItems } from '@server/controllers/writeItems';
 import { runMiddleware } from '@server/middleware/runMiddleware';
 import { cors } from '@server/middleware/cors';
 import { Items } from '@types';
+import { getItems } from '@server/controllers/getItems';
 
 const items: Items = async (req, res) => {
   try {
     await runMiddleware(req, res, cors as any);
-    await itemsController(req, res);
+    switch (req.method) {
+      case 'GET':
+        getItems(req, res);
+        break;
+      case 'POST':
+        writeItems(req, res);
+        break;
+    }
   } catch (error) {
     console.log(error);
     res

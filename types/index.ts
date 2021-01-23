@@ -18,10 +18,13 @@ export interface ButtonProps {
   disabled?: boolean;
 }
 
-export type GetItems = (
-  _req: NextApiRequest,
-  res: NextApiResponse
-) => Promise<void>;
+export enum Collection {
+  items = 'items',
+}
+
+export type GetAllCollection = (
+  collection: keyof typeof Collection
+) => Promise<FaunaItem[]>;
 
 export interface FaunaItem {
   data: Item;
@@ -68,7 +71,12 @@ export interface ItemProps {
   title: string;
 }
 
-export type ItemsController = (
+export type GetItems = (
+  req: NextApiRequest,
+  res: NextApiResponse
+) => Promise<void>;
+
+export type WriteItems = (
   req: NextApiRequest,
   res: NextApiResponse
 ) => Promise<void>;
@@ -80,10 +88,10 @@ export type CorrectProvider = (
   provider: Provider
 ) => firebase.auth.GoogleAuthProvider | firebase.auth.OAuthProvider;
 
-export type PostItem = (
-  req: NextApiRequest,
-  res: NextApiResponse
-) => Promise<void>;
+export type WriteToCollection = (
+  collection: keyof typeof Collection,
+  data: string
+) => Promise<Record<string, unknown>>;
 
 export enum Provider {
   GOOGLE = 'Google',

@@ -20,7 +20,7 @@ export const AddItem = (): React.ReactElement => {
     if (!text) {
       return setError('You gotta type something');
     }
-    const itemExists = items.find((item) => item?.data?.url === text);
+    const itemExists = items?.find((item) => item?.data?.url === text);
     if (itemExists) {
       return setError('Item already exists');
     }
