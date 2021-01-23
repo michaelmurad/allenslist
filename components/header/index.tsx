@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import styles from '@styles/components/Header.module.css';
 import { HeaderInner } from './headerInner';
@@ -69,7 +70,12 @@ export const Header = ({ title }: { title?: string }): React.ReactElement => {
       </Head>
       <div className={styles.outerContainer}>
         <div className={styles.titleContainer}>
-          <img alt="crying wallet" src="/images/logo.png"></img>
+          <Image
+            width={90}
+            height={80}
+            alt="crying wallet"
+            src="/images/logo.png"
+          />
           <h1 className={styles.title}>allenslist</h1>
         </div>
         <p className={styles.description}>
