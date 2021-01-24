@@ -5,7 +5,13 @@ import Image from 'next/image';
 import styles from '@styles/components/Header.module.css';
 import { HeaderInner } from './headerInner';
 
-export const Header = ({ title }: { title?: string }): React.ReactElement => {
+export const Header = ({
+  title,
+  showOuterHeader = true,
+}: {
+  title?: string;
+  showOuterHeader?: boolean;
+}): React.ReactElement => {
   const [isSticky, setSticky] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const handleScroll = () => {
@@ -68,20 +74,22 @@ export const Header = ({ title }: { title?: string }): React.ReactElement => {
           content="https://i.ibb.co/frjqFYm/allenslist-meta-img.png"
         ></meta>
       </Head>
-      <div className={styles.outerContainer}>
-        <div className={styles.titleContainer}>
-          <Image
-            width={90}
-            height={80}
-            alt="crying wallet"
-            src="/images/logo.png"
-          />
-          <h1 className={styles.title}>allenslist</h1>
+      {showOuterHeader ? (
+        <div className={styles.outerContainer}>
+          <div className={styles.titleContainer}>
+            <Image
+              width={90}
+              height={80}
+              alt="crying wallet"
+              src="/images/logo.png"
+            />
+            <h1 className={styles.title}>allenslist</h1>
+          </div>
+          <p className={styles.description}>
+            a curated list of expensive shit allen makes us want to buy
+          </p>
         </div>
-        <p className={styles.description}>
-          a curated list of expensive shit allen makes us want to buy
-        </p>
-      </div>
+      ) : null}
       <div
         className={`${styles.stickyWrapper} ${isSticky ? styles.sticky : ''}`}
         ref={ref}

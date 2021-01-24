@@ -22,18 +22,29 @@ export enum Collection {
   items = 'items',
 }
 
-export type GetAllCollection = (
-  collection: keyof typeof Collection
-) => Promise<FaunaItem[]>;
+type KeyOfCollection = keyof typeof Collection;
 
-export interface FaunaItem {
-  data: Item;
+export type GetAllCollection<T> = (
+  collection: KeyOfCollection
+) => Promise<FaunaQueryData<T>[]>;
+
+export type GetFromCollectionById<T> = (
+  collection: KeyOfCollection,
+  ID: string
+) => Promise<T>;
+
+export interface FaunaQueryData<T> {
+  data: T;
   ts: number;
-  ref: any;
+  ref: {
+    '@ref': {
+      id: string;
+    };
+  };
 }
 
-export interface FaunaQuery {
-  data: FaunaItem[];
+export interface FaunaQuery<T> {
+  data: FaunaQueryData<T> | FaunaQueryData<T>[];
 }
 
 export type Fetcher = (
@@ -69,6 +80,7 @@ export interface ItemProps {
   description: string;
   image: string;
   title: string;
+  id: string;
 }
 
 export type GetItems = (
@@ -89,7 +101,7 @@ export type CorrectProvider = (
 ) => firebase.auth.GoogleAuthProvider | firebase.auth.OAuthProvider;
 
 export type WriteToCollection = (
-  collection: keyof typeof Collection,
+  collection: KeyOfCollection,
   data: string
 ) => Promise<Record<string, unknown>>;
 

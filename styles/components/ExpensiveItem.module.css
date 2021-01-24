@@ -1,0 +1,44 @@
+.container {
+  flex: 1;
+  background-color: #e0e0e0;
+  padding: 2rem;
+  text-align: center;
+  color: black;
+}
+
+.title {
+  font-size: xx-large;
+  color: black;
+}
+
+.description {
+  padding: 0px 20%;
+}
+
+.container img {
+  margin: 2rem;
+  max-width: 600px;
+  max-height: 600px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .container img {
+    max-width: 250px;
+    max-height: 150px;
+    border-radius: 1rem;
+  }
+  .description {
+    padding: 0px 5%;
+  }
+}
+@media screen and (max-width: 374px) {
+  .container img {
+    max-width: 125px;
+    max-height: 75px;
+    border-radius: 1rem;
+  }
+  .description {
+    padding: 0px 2%;
+  }
+}

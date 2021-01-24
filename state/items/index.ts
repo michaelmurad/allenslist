@@ -1,5 +1,5 @@
 import { atom, selector } from 'recoil';
-import { FaunaItem } from '@types';
+import { FaunaQueryData, Item } from '@types';
 
 const initialItemState = '[]';
 
@@ -8,7 +8,7 @@ export const itemSelector = selector({
   get: ({ get }) => {
     const itemJSON = get(itemState);
     const error = get(itemErrorState);
-    const items: FaunaItem[] = JSON.parse(itemJSON);
+    const items: FaunaQueryData<Item>[] = JSON.parse(itemJSON);
     return { items, error };
   },
 });
