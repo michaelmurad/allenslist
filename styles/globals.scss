@@ -1,3 +1,5 @@
+@use 'styles/colors';
+
 html,
 body {
   height: 100%;
@@ -6,10 +8,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 body {
-  background-color: #035c9f;
+  background-color: colors.$primary-color;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: colors.$white;
 }
 
 #__next {
@@ -19,7 +21,7 @@ body {
 }
 
 a {
-  color: white;
+  color: colors.$white;
   text-decoration: none;
 }
 
@@ -31,7 +33,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e0e0e0;
+  background-color: colors.$light-grey;
 }
 
 footer {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
 
-import styles from '@styles/components/Items.module.css';
+import styles from '@styles/components/Items.module.scss';
 import { itemSelector } from '@state/items';
 import { Spinner } from '@components/spinner';
 import { Item } from '@components/item';

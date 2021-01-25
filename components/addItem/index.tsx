@@ -3,7 +3,7 @@ import { useState } from 'react';
 import firebase from 'firebase';
 import { useRecoilState, useRecoilValue } from 'recoil';
 
-import styles from '@styles/components/AddItem.module.css';
+import styles from '@styles/components/AddItem.module.scss';
 import { fetcher } from '@utilities/fetcher';
 import { itemState, itemSelector } from '@state/items';
 import { Button } from '@components/button';

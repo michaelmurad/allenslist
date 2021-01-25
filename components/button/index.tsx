@@ -1,4 +1,4 @@
-import styles from '@styles/components/Button.module.css';
+import styles from '@styles/components/Button.module.scss';
 import { ButtonProps } from '@types';
 
 export const Button = ({

@@ -1,3 +1,5 @@
+@use 'styles/colors';
+
 .form {
   display: flex;
   flex-direction: column;
@@ -25,5 +27,5 @@
 }
 
 .error {
-  color: red;
+  color: colors.$red;
 }

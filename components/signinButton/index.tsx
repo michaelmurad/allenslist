@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 
-import styles from '@styles/components/SigninButton.module.css';
+import styles from '@styles/components/SigninButton.module.scss';
 import { SigninButtonFunc, Provider, CorrectProvider } from '@types';
 
 const googleProvider = new firebase.auth.GoogleAuthProvider();

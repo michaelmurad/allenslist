@@ -1,6 +1,6 @@
 import { Footer } from '@components/footer';
 import { Header } from '@components/header';
-import styles from '@styles/About.module.css';
+import styles from '@styles/About.module.scss';
 
 const About = (): React.ReactElement => {
   return (

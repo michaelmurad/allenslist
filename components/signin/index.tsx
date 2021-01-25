@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 
-import styles from '@styles/components/Signin.module.css';
+import styles from '@styles/components/Signin.module.scss';
 import {
   LogoutButtonProps,
   Provider,

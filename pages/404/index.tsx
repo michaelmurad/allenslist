@@ -1,6 +1,6 @@
 import { Footer } from '@components/footer';
 import { Header } from '@components/header';
-import styles from '@styles/404.module.css';
+import styles from '@styles/404.module.scss';
 
 const Page404 = (): React.ReactElement => {
   return (

@@ -1,7 +1,8 @@
+@use 'styles/colors';
+
 .itemContainer {
   width: 100%;
   flex: 1;
-  background-color: Prima;
   display: flex;
   flex-direction: row;
   padding: 1rem;
@@ -16,12 +17,12 @@
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  background-color: #e0e0e0;
+  background-color: colors.$light-grey;
   align-items: center;
   padding: 1rem;
 }
 
 .empty p {
   font-size: x-large;
-  color: black;
+  color: colors.$black;
 }

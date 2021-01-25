@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useImperativeHandle, forwardRef, useRef } from 'react';
 
-import styles from '@styles/components/Modal.module.css';
+import styles from '@styles/components/Modal.module.scss';
 
 const Modal = (
   { children, onClick }: { children: React.ReactNode; onClick: () => void },

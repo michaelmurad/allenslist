@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useRecoilState } from 'recoil';
 
-import styles from '@styles/components/Header.module.css';
+import styles from '@styles/components/Header.module.scss';
 import { userState } from '@state/user';
 import Modal from '@components/Modal';
 import { SigninProps } from '@types';

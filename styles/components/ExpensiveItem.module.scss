@@ -1,14 +1,16 @@
+@use 'styles/colors';
+
 .container {
   flex: 1;
-  background-color: #e0e0e0;
+  background-color: colors.$light-grey;
   padding: 2rem;
   text-align: center;
-  color: black;
+  color: colors.$black;
 }
 
 .title {
   font-size: xx-large;
-  color: black;
+  color: colors.$black;
 }
 
 .description {

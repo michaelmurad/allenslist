@@ -1,0 +1,9 @@
+@use 'styles/colors';
+
+.container {
+  background-color: colors.$light-grey;
+  padding: 1rem;
+  color: colors.$black;
+  width: 100%;
+  flex: 1;
+}

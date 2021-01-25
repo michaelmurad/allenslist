@@ -1,5 +1,5 @@
 import { Item } from '@types';
-import styles from '@styles/components/ExpensiveItem.module.css';
+import styles from '@styles/components/ExpensiveItem.module.scss';
 import Link from 'next/link';
 
 export const ExpensiveItem = ({

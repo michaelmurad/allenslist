@@ -1,3 +1,5 @@
+@use 'styles/colors';
+
 .headerInner a {
   padding: 0 0.4rem;
 }
@@ -22,7 +24,7 @@
 .outerContainer {
   padding: 1rem;
   width: 100%;
-  background-color: #035c9f;
+  background-color: colors.$primary-color;
 }
 .titleContainer {
   display: flex;
@@ -38,7 +40,7 @@
 }
 
 .title a {
-  color: #035c9f;
+  color: colors.$primary-color;
   text-decoration: none;
 }
 
@@ -60,7 +62,7 @@
 }
 
 .headerItem {
-  color: white;
+  color: colors.$white;
   cursor: pointer;
 }
 
@@ -84,12 +86,12 @@
   align-items: center;
   width: 100%;
   padding: 10px;
-  background-color: #035c9f;
-  color: white;
+  background-color: colors.$primary-color;
+  color: colors.$white;
 }
 
 .stickyInner div:active {
-  color: gray;
+  color: colors.$grey;
 }
 
 .stickyInner div:focus {

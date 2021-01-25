@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@styles/components/Item.module.css';
+import styles from '@styles/components/Item.module.scss';
 import { ItemProps } from '@types';
 
 export const Item = ({ image, title, id }: ItemProps): React.ReactElement => {

@@ -1,4 +1,4 @@
-import '@styles/globals.css';
+import '@styles/globals.scss';
 import { RecoilRoot } from 'recoil';
 
 import initializeFirebase from '@utilities/firebase';
